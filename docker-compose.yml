@@ -1,7 +1,7 @@
 name: server-healthcheck
 
 services:
-  server-healthcheck:
+  app:
     container_name: health-check
     build: .
     ports:
