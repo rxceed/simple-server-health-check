@@ -1,0 +1,13 @@
+name: server-healthcheck
+
+services:
+  server-healthcheck:
+    container_name: health-check
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    volumes:
+      - .:/usr/src/app
+    command: ["npm", "start"]
